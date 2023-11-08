@@ -1,8 +1,22 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+// src/App.js
+import React from 'react';
+import Main from './Main/Main';
+import './App.css';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+function App() {
+  return (
+      <div className="App">
+        <header className="App-header">
+          <h1>CrapTrak</h1>
+        </header>
+        <main className="App-content">
+          <Main />
+        </main>
+        <footer className="App-footer">
+          {/* Add footer content if needed */}
+        </footer>
+      </div>
+  );
+}
+
+export default App;

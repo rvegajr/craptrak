@@ -1,0 +1,51 @@
+/* src/RollHistory/RollHistory.css */
+.roll-history ul {
+    list-style: none; /* Remove the default list item dots */
+    padding-left: 0; /* Remove default padding */
+}
+
+.roll-entry {
+    display: flex;
+    align-items: center; /* Align the flex items vertically */
+    margin-bottom: 0.5rem;
+}
+
+.roll-total {
+    font-weight: bold; /* Make the numbers bold */
+    margin-right: 5px; /* Space out the numbers from the dice */
+    width: 50px; /* Fixed width for the numbers container */
+    display: flex;
+    align-items: center; /* Align the text vertically */
+    justify-content: center; /* Center the text horizontally */
+}
+
+.fa-dice {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin-right: 5px; /* Space out the icons */
+}
+
+.fa-dice:last-child {
+    margin-right: 0;
+}
+
+/* src/RollHistory/RollHistory.css */
+
+/* ... existing styles ... */
+
+.selected-roll .fa-dice {
+    color: orange;
+}
+
+.fa-trash {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Add hover effects if desired */
+.fa-trash:hover {
+    color: red;
+}
+
+.selected-roll {
+    background-color: lavender; /* Or any highlight color of your choice */
+}

@@ -1,0 +1,50 @@
+/* src/DiceFaces/DiceFace.css */
+.dice-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This will space your items evenly */
+    align-items: center; /* This will center them vertically */
+    padding: 0; /* Reset padding to ensure container width is accurate */
+    list-style: none; /* Remove list styles if using <ul> */
+    margin: 0 auto; /* Center the container if it's not full width */
+}
+
+.dice {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem; /* This sets the size of the dice icons */
+    flex: 0 0 32%; /* Slightly less than one-third to account for browser rounding */
+    max-width: 32%; /* Ensures dice do not stretch beyond calculated width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 4px; /* Small margin for spacing, adjust as needed */
+    text-align: center; /* Center the icon text in the button */
+}
+
+/* Use a media query to adjust layout on smaller screens if necessary */
+@media (max-width: 600px) {
+    .dice {
+        flex: 0 0 48%; /* Adjust for 2 dice per row on small screens */
+        max-width: 48%; /* Adjust for 2 dice per row on small screens */
+    }
+}
+
+.dice.selected {
+    color: green; /* Highlight the selected dice face in green */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .dice {
+        flex: 1 1 calc(50% - 8px); /* Adjust for smaller screens if needed */
+        max-width: calc(50% - 8px); /* Adjust for smaller screens if needed */
+    }
+}
+
+/* Media query for smaller screens to adjust the layout */
+@media (max-width: 768px) {
+    .dice {
+        font-size: 2rem; /* Smaller dice on smaller screens */
+    }
+}

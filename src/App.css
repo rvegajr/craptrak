@@ -1,38 +1,39 @@
+/* src/App.css */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
 }
 
 .App-header {
+  background-color: black; /* Sets the background to black */
+  color: white; /* Sets the text color to white */
+  font-size: 16px; /* Sets a smaller font size, adjust as needed */
+  margin: 0; /* Removes any default margin */
+  width: 100%; /* Ensures the header extends the full width of the screen */
+  text-align: center; /* Centers the text horizontally */
+}
+
+.App-content {
+  flex-grow: 1; /* Allows this element to take up the remaining space */
+  display: flex; /* Makes it a flex container */
+}
+
+.App-footer {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* src/App.css */
+.undo-icon {
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.undo-icon:hover {
+  color: green; /* Example hover effect */
 }
